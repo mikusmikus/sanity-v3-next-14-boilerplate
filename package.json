@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "engines": {
+    "pnpm": "^8.9.0",
+    "node": "^18.17.0",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@riis/tsconfig": "workspace:*",
+    "eslint": "^8.51.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.3",
+    "turbo": "latest"
+  }
+}

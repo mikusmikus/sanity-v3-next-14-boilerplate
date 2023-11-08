@@ -1,0 +1,27 @@
+{
+  "name": "@riis/ui",
+  "private": true,
+  "main": "./src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.tsx ./src",
+    "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src",
+    "generate:svg-components": "svgr --config-file=.svgrrc.config.js --out-dir=src/icons  -- icons && svgr --config-file=.svgrrc-logo.config.js --out-dir=src/logos  -- logos && pnpm lint:fix"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@riis/eslint-config": "workspace:^",
+    "@riis/tsconfig": "workspace:^",
+    "@svgr/cli": "^8.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18.2.31",
+    "@types/react-dom": "^18",
+    "path": "^0.12.7"
+  }
+}
